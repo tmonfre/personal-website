@@ -7,6 +7,11 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.static(`${__dirname}/build`));
+app.use(express.static(`${__dirname}/static`));
+
+app.get('/resume.pdf', (req, res) => {
+  res.sendFile(path.join(__dirname, './static/resume.pdf'));
+});
 
 app.get('*', (req, res) => {
   const file = !req.url.includes('.') ? './build/index.html' : `./build/${req.url.split('/').pop()}`;
