@@ -1,8 +1,11 @@
 import './styles.scss';
 
+import ProfileImage from '../../assets/profile.png';
+
 const About = (): JSX.Element => (
   <div id="about-container">
-    <h1>About</h1>
+    <p>About</p>
+    <img src={ProfileImage} alt="me" />
   </div>
 );
 

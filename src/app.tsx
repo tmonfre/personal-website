@@ -14,6 +14,8 @@ import {
 
 import { PageRoutes } from './constants';
 
+import './styles.scss';
+
 const App = (): JSX.Element => (
   <Router>
     <Nav />

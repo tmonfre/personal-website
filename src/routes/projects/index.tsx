@@ -2,7 +2,7 @@ import './styles.scss';
 
 const Projects = (): JSX.Element => (
   <div id="projects-container">
-    <h1>Projects</h1>
+    <p>Projects</p>
   </div>
 );
 
