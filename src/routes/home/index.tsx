@@ -25,7 +25,7 @@ const Home = (): JSX.Element => (
         </h3>
       </div>
       <div className="button-container">
-        <Link to={PageRoutes.About}>View more about me</Link>
+        <Link to={PageRoutes.About}>Learn more about me</Link>
       </div>
     </div>
     {/* <div className="line" /> */}
