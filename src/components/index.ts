@@ -1,5 +1,5 @@
-import NavBar from './nav-bar';
+import Nav from './nav';
 
 export {
-  NavBar,
+  Nav,
 };

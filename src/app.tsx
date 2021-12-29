@@ -9,14 +9,14 @@ import {
 } from './routes';
 
 import {
-  NavBar,
+  Nav,
 } from './components';
 
 import { PageRoutes } from './constants';
 
 const App = (): JSX.Element => (
   <Router>
-    <NavBar />
+    <Nav />
     <div className="content">
       <Switch>
         <Route exact path={PageRoutes.Home} component={Home} />
