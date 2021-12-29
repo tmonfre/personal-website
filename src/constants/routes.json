@@ -2,5 +2,6 @@
     "Home": "/",
     "About": "/about",
     "Projects": "/projects",
-    "Contact": "/contact"
+    "Contact": "/contact",
+    "Resume": "/resume.pdf"
 }
