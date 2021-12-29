@@ -10,6 +10,7 @@ import {
 
 import {
   Nav,
+  Footer,
 } from './components';
 
 import { PageRoutes } from './constants';
@@ -28,6 +29,7 @@ const App = (): JSX.Element => (
         <Route component={NotFound} />
       </Switch>
     </div>
+    <Footer />
   </Router>
 );
 

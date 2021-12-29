@@ -5,7 +5,7 @@ import './styles.scss';
 
 const NavBar = (): JSX.Element => (
   <nav>
-    <Link to={PageRoutes.Home} id="title">Thomas Monfre</Link>
+    <Link to={PageRoutes.Home} id="title">TM</Link>
     <div id="menu-container">
       <Link to={PageRoutes.About}>About</Link>
       <Link to={PageRoutes.Projects}>Projects</Link>

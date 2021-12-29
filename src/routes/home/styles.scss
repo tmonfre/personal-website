@@ -2,12 +2,58 @@
     margin-top: 20px;
 
     #info-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10vh;
+        margin-left: 5vw;
+
         p {
             font-size: 18px;
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            font-size: 54px;
+            font-weight: 900;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        #text-section {
+            margin-top: 10px;
+
+            h3 {
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: 7px;
+                color: grey;
+                line-height: 25px;
+            }
+        }
+
+        #button-container {
+            margin-top: 40px;
+
+            a {
+                text-decoration: none;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 15px;
+                transition: 0.4s;
+                color: #5678a8;
+                border-color: #5678a8;
+            }
+
+            a:hover {
+                color: white;
+                background-color: #5678a8;
+            }
         }
     
         a {
-            color: #1a6bdb;
+            color: #5678a8;
         }
     }
 
