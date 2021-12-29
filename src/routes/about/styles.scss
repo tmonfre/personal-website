@@ -1,8 +1,19 @@
 #about-container {
-    margin-top: 5vh;
-    margin-left: 2vw;
+    margin: 5vh 2vw;
 
     img {
         width: 250px;
+    }
+
+    ul {
+        list-style-type: circle;
+        width: 300px;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+
+        li {
+            margin-bottom: 5px;
+        }
     }
 }

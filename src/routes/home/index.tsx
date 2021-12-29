@@ -24,7 +24,7 @@ const Home = (): JSX.Element => (
           as a Forward Deployed Engineer.
         </h3>
       </div>
-      <div id="button-container">
+      <div className="button-container">
         <Link to={PageRoutes.About}>View more about me</Link>
       </div>
     </div>

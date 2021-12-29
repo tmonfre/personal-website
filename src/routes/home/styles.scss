@@ -32,29 +32,6 @@
                 line-height: 25px;
             }
         }
-
-        #button-container {
-            margin-top: 40px;
-
-            a {
-                text-decoration: none;
-                border: 1px solid black;
-                border-radius: 5px;
-                padding: 15px;
-                transition: 0.4s;
-                color: #5678a8;
-                border-color: #5678a8;
-            }
-
-            a:hover {
-                color: white;
-                background-color: #5678a8;
-            }
-        }
-    
-        a {
-            color: #5678a8;
-        }
     }
 
     .line {
