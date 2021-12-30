@@ -26,5 +26,9 @@ footer {
 @media (prefers-color-scheme: dark) {
     footer {
         background-color: #2f3a4a;
+
+        img {
+            filter: invert(100%);
+        }
     }
 }
