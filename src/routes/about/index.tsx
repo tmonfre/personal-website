@@ -1,6 +1,10 @@
 import {
-  MouseEvent, useState, useEffect, useCallback,
+  MouseEvent,
+  useCallback,
+  useEffect,
+  useState,
 } from 'react';
+
 import { PageRoutes } from '../../constants';
 import { ImageInformation } from './index.d';
 
@@ -10,17 +14,17 @@ import LeftChevron from '../../assets/icons/left-chevron.png';
 import RightChevron from '../../assets/icons/right-chevron.png';
 
 import PersonalImg from '../../assets/images/personal.jpg';
-import MoosilaukeImg from '../../assets/images/moosilauke.jpg';
 import KillingtonImg from '../../assets/images/killington.jpg';
 import TellurideImg from '../../assets/images/telluride.jpg';
-import PicoImg from '../../assets/images/pico.jpg';
+import MunisingImg from '../../assets/images/munising.jpg';
+import StoweImg from '../../assets/images/stowe.jpg';
 
 const images: ImageInformation[] = [
   { src: PersonalImg, alt: 'Me — 2018' },
-  { src: MoosilaukeImg, alt: 'Peak of Mt. Moosilauke, Warren, NH — 2020' },
+  { src: StoweImg, alt: 'Stowe, VT — 2021' },
   { src: KillingtonImg, alt: 'Killington, VT — 2021' },
   { src: TellurideImg, alt: 'Telluride, CO — 2019' },
-  { src: PicoImg, alt: 'Pico, VT — 2020' },
+  { src: MunisingImg, alt: 'Munising, MI — 2021' },
 ];
 
 const About = (): JSX.Element => {

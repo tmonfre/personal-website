@@ -2,7 +2,7 @@ import './styles.scss';
 
 const Contact = (): JSX.Element => (
   <div id="contact-container">
-    <p>Contact</p>
+    <h1>Contact</h1>
   </div>
 );
 
