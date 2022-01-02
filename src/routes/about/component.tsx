@@ -1,57 +1,17 @@
 import {
-  MouseEvent,
-  useCallback,
-  useEffect,
   useState,
 } from 'react';
 
 import { Props } from './index.d';
 import { PageRoutes } from '../../constants';
-
-import LeftChevron from '../../assets/icons/left-chevron.png';
-import RightChevron from '../../assets/icons/right-chevron.png';
+import { ImageCarousel } from '../../components';
 
 import './styles.scss';
 
 const About = (props: Props): JSX.Element => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
-
   const { images } = props;
 
-  const imageShuffler = (spacer: number) => () => {
-    if (selectedImageIndex !== undefined) {
-      const newValue = selectedImageIndex + spacer;
-
-      if (newValue >= 0 && newValue < images.length) {
-        setSelectedImageIndex(newValue);
-      }
-    }
-  };
-
-  function closeSelectedImage() {
-    setSelectedImageIndex(undefined);
-  }
-
-  function handleBackgroundCloseClick(event: MouseEvent<HTMLDivElement>) {
-    if ((event.target as HTMLDivElement).id === 'selected-image-holder') {
-      closeSelectedImage();
-    }
-  }
-
-  // close the selected image when esc pressed
-  const onEscPressed = useCallback((event) => {
-    if (event.keyCode === 27) {
-      closeSelectedImage();
-    }
-  }, []);
-
-  // set up key listener for esc
-  useEffect(() => {
-    document.addEventListener('keydown', onEscPressed);
-    return () => {
-      document.removeEventListener('keydown', onEscPressed);
-    };
-  }, [onEscPressed]);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
 
   return (
     <div id="about-container">
@@ -107,28 +67,12 @@ const About = (props: Props): JSX.Element => {
         ))}
       </div>
       {selectedImageIndex !== undefined && (
-      <div id="selected-image-holder" onClick={handleBackgroundCloseClick} role="presentation">
-        <div id="selected-image-container">
-          <img
-            alt="left chevron"
-            className="chevron"
-            onClick={imageShuffler(-1)}
-            role="presentation"
-            src={LeftChevron}
-            style={selectedImageIndex === 0 ? { filter: 'invert(50%)' } : {}}
-          />
-          <img src={images[selectedImageIndex].src} alt={images[selectedImageIndex].alt} />
-          <img
-            alt="right chevron"
-            className="chevron"
-            onClick={imageShuffler(1)}
-            role="presentation"
-            src={RightChevron}
-            style={selectedImageIndex === images.length - 1 ? { filter: 'invert(50%)' } : {}}
-          />
-        </div>
-        <p>{images[selectedImageIndex].alt}</p>
-      </div>
+        <ImageCarousel
+          closeCarousel={() => setSelectedImageIndex(undefined)}
+          images={images}
+          selectedIndex={selectedImageIndex}
+          setSelectedIndex={setSelectedImageIndex}
+        />
       )}
     </div>
   );
