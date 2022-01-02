@@ -15,6 +15,11 @@ export type ProjectInformation = {
     appStore?: string;
 }
 
+export type ProjectPreviewProps = {
+    project: ProjectInformation;
+}
+
 export type Props = {
-    projects: ProjectInformation[];
+    standaloneProjects: ProjectInformation[];
+    imageProjects: ProjectInformation[];
 }

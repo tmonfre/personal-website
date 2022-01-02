@@ -17,13 +17,24 @@ import SixAMWebHome from '../../assets/projects/6amhealth/order-web-home.png';
 import SixAMAWebCheckout from '../../assets/projects/6amhealth/checkout-web.png';
 import SixAMAdminOrder from '../../assets/projects/6amhealth/admin-order.png';
 
-const projects: ProjectInformation[] = [{
+const standaloneProjects: ProjectInformation[] = [{
   title: 'Zoom CLI',
-  description: 'Command line tool for saving and launching Zoom meetings from the command line. Available on macOS and Linux. Open source and free to download via Homebrew.',
+  description: 'Command line tool for saving and launching Zoom meetings from the command line. Users can store recurring meetings or launch new ones. Available on macOS and Linux. Open source and free to download via Homebrew.',
   technologies: ['Python'],
   images: [],
-  github: [{ link: 'https://github.com/tmonfre/zoom-cli' }],
+  github: [{ link: 'https://github.com/tmonfre/zoom-cli', tooltip: 'Source code' }],
 }, {
+  title: 'Starterpacks',
+  description: 'Open source starter packs for full stack web applications. Repositories available for front-end with React and back-end with Express.js and MySQL. Both written in TypeScript and containerized for use with Docker.',
+  technologies: ['TypeScript', 'Docker', 'Webpack', 'Babel', 'React', 'Node', 'MySQL'],
+  images: [],
+  github: [
+    { link: 'https://github.com/tmonfre/example-typescript-webapp', tooltip: 'Web app' },
+    { link: 'https://github.com/tmonfre/example-typescript-server', tooltip: 'Server' },
+  ],
+}];
+
+const imageProjects: ProjectInformation[] = [{
   title: 'Pine Beetle Outbreak Prediction',
   description: 'Website for visualizing and predicting movements of an invasive species impacting east-cost forests. Built in the DALI Lab partnering with the US Forest Service and Dartmouth Biology professors.',
   technologies: ['React', 'Node', 'MongoDB'],
@@ -51,15 +62,6 @@ const projects: ProjectInformation[] = [{
   ],
   web: 'https://my-ballot.netlify.app/',
 }, {
-  title: 'Starterpacks',
-  description: 'Open source starter packs for full stack web applications. Repositories available for front-end with React and back-end with Express.js and MySQL. Both written in TypeScript and containerized for use with Docker.',
-  technologies: ['TypeScript', 'Docker', 'Webpack', 'Babel', 'React', 'Node', 'MySQL'],
-  images: [],
-  github: [
-    { link: 'https://github.com/tmonfre/example-typescript-webapp', tooltip: 'Web app' },
-    { link: 'https://github.com/tmonfre/example-typescript-server', tooltip: 'Server' },
-  ],
-}, {
   title: '6AM Health',
   description: 'Mobile and web applications for ordering fresh food to Internet-connected vending machines throughout the Boston area. Built in the DALI Lab partnering with a Boston-based start-up.',
   technologies: ['React', 'React Native', 'Node', 'MongoDB'],
@@ -74,4 +76,9 @@ const projects: ProjectInformation[] = [{
   appStore: 'https://apps.apple.com/us/app/6am-health/id1474745789',
 }];
 
-export default (): JSX.Element => <Projects projects={projects} />;
+export default (): JSX.Element => (
+  <Projects
+    standaloneProjects={standaloneProjects}
+    imageProjects={imageProjects}
+  />
+);
