@@ -1,11 +1,16 @@
 import { ImageInformation } from '../../index.d';
 
+export type GitHubLink = {
+    link: string;
+    tooltip?: string;
+}
+
 export type ProjectInformation = {
     title: string;
     description: string;
     technologies: string[];
     images: ImageInformation[];
-    github?: string[];
+    github?: GitHubLink[];
     web?: string;
     appStore?: string;
 }
