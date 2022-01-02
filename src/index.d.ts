@@ -1,4 +1,5 @@
 export type ImageInformation = {
     src: string;
-    alt: string
+    alt: string;
+    width?: number;
 }

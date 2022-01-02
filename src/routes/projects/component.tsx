@@ -10,7 +10,7 @@ import TagIcon from '../../assets/icons/tag.png';
 
 import './styles.scss';
 
-const PROJECT_IMAGE_WIDTH = 275;
+const DEFAULT_PROJECT_IMAGE_WIDTH = 275;
 
 const Projects = (props: Props): JSX.Element => {
   const { projects } = props;
@@ -66,24 +66,31 @@ const Projects = (props: Props): JSX.Element => {
                 </div>
               </div>
               <div className="project-image-container">
-                {images.map(({ src, alt }, index) => (
-                  <img
-                    alt={alt}
-                    className={imageLoadStatus[src] ? 'image-loaded' : ''}
-                    key={src}
-                    onClick={() => {
-                      setSelectedImageIndex(index);
-                      setSelectedProject(title);
-                    }}
-                    onLoad={() => setImageLoadStatus((curr) => ({ ...curr, [src]: true }))}
-                    role="presentation"
-                    src={src}
-                    style={{
-                      marginLeft: `${index * (PROJECT_IMAGE_WIDTH - (((PROJECT_IMAGE_WIDTH * images.length) - imageContainerWidth)) / (images.length - 1))}px`,
-                      zIndex: images.length - index,
-                    }}
-                  />
-                ))}
+                {images.map(({ src, alt, width: overrideWidth }, index) => {
+                  const width = overrideWidth || DEFAULT_PROJECT_IMAGE_WIDTH;
+                  const marginLeftAmount = index * (
+                    width - (((width * images.length) - imageContainerWidth)) / (images.length - 1)
+                  );
+
+                  return (
+                    <img
+                      alt={alt}
+                      className={imageLoadStatus[src] ? 'image-loaded' : ''}
+                      key={src}
+                      onClick={() => {
+                        setSelectedImageIndex(index);
+                        setSelectedProject(title);
+                      }}
+                      onLoad={() => setImageLoadStatus((curr) => ({ ...curr, [src]: true }))}
+                      role="presentation"
+                      src={src}
+                      style={{
+                        marginLeft: `${marginLeftAmount}px`,
+                        zIndex: images.length - index,
+                      }}
+                    />
+                  );
+                })}
               </div>
               {selectedImageIndex !== undefined && selectedProject === title && (
                 <ImageCarousel
