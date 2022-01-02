@@ -1,9 +1,11 @@
 import Nav from './nav';
 import Footer from './footer';
 import ImageCarousel from './image-carousel';
+import FadeLoad from './fade-load';
 
 export {
-  Nav,
+  FadeLoad,
   Footer,
   ImageCarousel,
+  Nav,
 };

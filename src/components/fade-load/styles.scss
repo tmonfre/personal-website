@@ -1,0 +1,8 @@
+.not-loaded {
+    opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
