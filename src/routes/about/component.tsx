@@ -1,4 +1,5 @@
 import {
+  useEffect,
   useState,
 } from 'react';
 
@@ -12,6 +13,14 @@ const About = (props: Props): JSX.Element => {
   const { images } = props;
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
+  const [imageLoadStatus, setImageLoadStatus] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    setImageLoadStatus(images.reduce((acc, curr) => ({
+      ...acc,
+      [curr.src]: false,
+    }), {}));
+  }, [images]);
 
   return (
     <div id="about-container">
@@ -63,7 +72,20 @@ const About = (props: Props): JSX.Element => {
       <div className="line" />
       <div id="image-container">
         {images.map(({ src, alt }, index) => (
-          <img src={src} alt={alt} key={alt} role="presentation" onClick={() => setSelectedImageIndex(index)} />
+          <img
+            alt={alt}
+            className={imageLoadStatus[src] ? 'image-loaded' : ''}
+            key={alt}
+            onClick={() => setSelectedImageIndex(index)}
+            onLoad={() => {
+              setImageLoadStatus((curr) => ({
+                ...curr,
+                [src]: true,
+              }));
+            }}
+            role="presentation"
+            src={src}
+          />
         ))}
       </div>
       {selectedImageIndex !== undefined && (

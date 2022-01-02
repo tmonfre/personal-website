@@ -18,6 +18,7 @@ const Projects = (props: Props): JSX.Element => {
   const [imageContainerWidth, setImageContainerWidth] = useState<number>(0);
   const [selectedProject, setSelectedProject] = useState<string>();
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
+  const [imageLoadStatus, setImageLoadStatus] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver((event) => {
@@ -66,18 +67,25 @@ const Projects = (props: Props): JSX.Element => {
             <div className="project-image-container">
               {images.map(({ src, alt }, index) => (
                 <img
-                  src={src}
                   alt={alt}
+                  className={imageLoadStatus[src] ? 'image-loaded' : ''}
                   key={src}
-                  style={{
-                    marginLeft: `${index * (PROJECT_IMAGE_WIDTH - (((PROJECT_IMAGE_WIDTH * images.length) - imageContainerWidth)) / (images.length - 1))}px`,
-                    zIndex: images.length - index,
-                  }}
                   onClick={() => {
                     setSelectedImageIndex(index);
                     setSelectedProject(title);
                   }}
+                  onLoad={() => {
+                    setImageLoadStatus((curr) => ({
+                      ...curr,
+                      [src]: true,
+                    }));
+                  }}
                   role="presentation"
+                  src={src}
+                  style={{
+                    marginLeft: `${index * (PROJECT_IMAGE_WIDTH - (((PROJECT_IMAGE_WIDTH * images.length) - imageContainerWidth)) / (images.length - 1))}px`,
+                    zIndex: images.length - index,
+                  }}
                 />
               ))}
             </div>
