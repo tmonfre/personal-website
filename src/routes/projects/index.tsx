@@ -29,7 +29,7 @@ const standaloneProjects: ProjectInformation[] = [{
   technologies: ['TypeScript', 'Docker', 'Webpack', 'Babel', 'React', 'Node', 'MySQL'],
   images: [],
   github: [
-    { link: 'https://github.com/tmonfre/example-typescript-webapp', tooltip: 'Web app' },
+    { link: 'https://github.com/tmonfre/example-typescript-webapp', tooltip: 'Client' },
     { link: 'https://github.com/tmonfre/example-typescript-server', tooltip: 'Server' },
   ],
 }];
