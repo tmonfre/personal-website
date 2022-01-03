@@ -10,8 +10,8 @@ COPY . .
 
 RUN npm run build
 
-ENV PORT=8080
+ENV PORT=80
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["node", "app.js"]
