@@ -76,7 +76,7 @@ const ProjectPreview = ({ project }: ProjectPreviewProps): JSX.Element => {
                 role="presentation"
                 src={src}
                 style={{
-                  marginLeft: `${marginLeftAmount}px`,
+                  marginLeft: `${imageContainerWidth < 300 ? 0 : marginLeftAmount}px`,
                   zIndex: images.length - index,
                 }}
               />
