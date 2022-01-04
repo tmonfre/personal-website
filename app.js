@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(`${__dirname}/build`));
 app.use(express.static(`${__dirname}/static`));
 
-app.get('/resume.pdf', (req, res) => {
+app.get('/resume', (req, res) => {
   res.sendFile(path.join(__dirname, './static/resume.pdf'));
 });
 
