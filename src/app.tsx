@@ -6,6 +6,7 @@ import {
   Home,
   NotFound,
   Projects,
+  ZoomCLI,
 } from './routes';
 
 import {
@@ -26,6 +27,7 @@ const App = (): JSX.Element => (
         <Route exact path={PageRoutes.About} component={About} />
         <Route exact path={PageRoutes.Projects} component={Projects} />
         <Route exact path={PageRoutes.Contact} component={Contact} />
+        <Route exact path={PageRoutes.Zoom} component={ZoomCLI} />
         <Route component={NotFound} />
       </Switch>
     </div>
