@@ -1,5 +1,6 @@
 import Projects from './component';
 import { ProjectInformation } from './index.d';
+import { PageRoutes } from '../../constants/index';
 
 import PineBeetleHome from '../../assets/projects/pine-beetle/home.png';
 import PineBeetleTrappingData from '../../assets/projects/pine-beetle/trapping-data.png';
@@ -23,6 +24,7 @@ const standaloneProjects: ProjectInformation[] = [{
   technologies: ['Python'],
   images: [],
   github: [{ link: 'https://github.com/tmonfre/zoom-cli', tooltip: 'Source code' }],
+  web: window.location.origin + PageRoutes.Zoom,
 }, {
   title: 'Starterpacks',
   description: 'Open source starter packs for full stack web applications. Repositories available for front-end with React and back-end with Express.js and MySQL. Both written in TypeScript and containerized for use with Docker.',
