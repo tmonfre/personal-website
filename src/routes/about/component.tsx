@@ -52,7 +52,11 @@ const About = (props: Props): JSX.Element => {
           <li>Python</li>
         </ul>
         <p>
-          I graduated magna cum laude from
+          I graduated
+          {' '}
+          <span>magna cum laude</span>
+          {' '}
+          from
           {' '}
           <a href="https://www.dartmouth.edu/" target="_blank" rel="noreferrer">Dartmouth College</a>
           {' '}
