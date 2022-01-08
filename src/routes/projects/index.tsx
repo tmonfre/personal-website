@@ -20,7 +20,7 @@ import SixAMAdminOrder from '../../assets/projects/6amhealth/admin-order.png';
 
 const standaloneProjects: ProjectInformation[] = [{
   title: 'Zoom CLI',
-  description: 'Command line tool for saving and launching Zoom meetings from the command line. Users can store recurring meetings or launch new ones. Available on macOS and Linux. Open source and free to download via Homebrew.',
+  description: 'Command line tool for saving and launching Zoom meetings from a terminal. Users can store recurring meetings or launch new ones. Available on macOS and Linux. Open source and free to download via Homebrew.',
   technologies: ['Python'],
   images: [],
   github: [{ link: 'https://github.com/tmonfre/zoom-cli', tooltip: 'Source code' }],
