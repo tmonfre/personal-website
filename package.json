@@ -1,6 +1,6 @@
 {
-  "name": "tmonfre.github.io",
-  "version": "1.1.5",
+  "name": "thomasmonfre.com",
+  "version": "1.1.6",
   "description": "Personal Website",
   "main": "app.js",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tmonfre/tmonfre.github.io.git"
+    "url": "git+https://github.com/tmonfre/personal-website.git"
   },
   "author": "Thomas Monfre",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tmonfre/tmonfre.github.io/issues"
+    "url": "https://github.com/tmonfre/personal-website/issues"
   },
-  "homepage": "https://github.com/tmonfre/tmonfre.github.io#readme",
+  "homepage": "https://github.com/tmonfre/personal-website#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
@@ -58,6 +58,8 @@
     "axios": "^0.22.0",
     "buffer": "^6.0.3",
     "express": "^4.17.1",
+    "follow-redirects": ">=1.14.7",
+    "node-forge": ">=1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.1",
