@@ -45,6 +45,12 @@
         }
     }
 
+    #latest-release {
+        #time-since {
+            font-style: italic;
+        }
+    }
+
     @media (prefers-color-scheme: light) {
         #installation-instructions-container {
             background-color: #b0bfd4;
