@@ -17,27 +17,30 @@ function timeDifference(timestamp: Date): string {
 
   const elapsed = new Date().getTime() - timestamp.getTime();
 
+  // define default values
+  let duration = Math.round(elapsed / msPerYear);
+  let phrase = 'year';
+
+  // step through each possible duration
   if (elapsed < msPerMinute) {
-    return `${Math.round(elapsed / 1000)} seconds ago`;
+    duration = Math.round(elapsed / 1000);
+    phrase = 'second';
+  } else if (elapsed < msPerHour) {
+    duration = Math.round(elapsed / msPerMinute);
+    phrase = 'minute';
+  } else if (elapsed < msPerDay) {
+    duration = Math.round(elapsed / msPerHour);
+    phrase = 'hour';
+  } else if (elapsed < msPerMonth) {
+    duration = Math.round(elapsed / msPerDay);
+    phrase = 'day';
+  } else if (elapsed < msPerYear) {
+    duration = Math.round(elapsed / msPerMonth);
+    phrase = 'month';
   }
 
-  if (elapsed < msPerHour) {
-    return `${Math.round(elapsed / msPerMinute)} minutes ago`;
-  }
-
-  if (elapsed < msPerDay) {
-    return `${Math.round(elapsed / msPerHour)} hours ago`;
-  }
-
-  if (elapsed < msPerMonth) {
-    return `about ${Math.round(elapsed / msPerDay)} days ago`;
-  }
-
-  if (elapsed < msPerYear) {
-    return `about ${Math.round(elapsed / msPerMonth)} months ago`;
-  }
-
-  return `about ${Math.round(elapsed / msPerYear)} years ago`;
+  // only include plural if not singular
+  return `about ${duration} ${duration === 1 ? phrase : `${phrase}s`} ago`;
 }
 
 /**
