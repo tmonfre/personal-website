@@ -1,7 +1,5 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Props } from './index.d';
 import { PageRoutes } from '../../constants';
@@ -69,10 +67,11 @@ const About = (props: Props): JSX.Element => {
         </p>
         <p>
           In my free time, I love to ski and explore the outdoors.
-          I also enjoy cooking, baking, and being with friends.
+          I also enjoy cooking, baking, and spending time with friends.
         </p>
         <div className="button-container">
           <a href={window.location.origin + PageRoutes.Resume} target="_blank" rel="noreferrer">View my resume</a>
+          <Link to={PageRoutes.Projects}>View my projects</Link>
         </div>
         <div className="line" />
         <div id="image-container">

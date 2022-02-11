@@ -12,6 +12,7 @@ import {
 import {
   Nav,
   Footer,
+  ScrollToTop,
 } from './components';
 
 import { PageRoutes } from './constants';
@@ -32,6 +33,7 @@ const App = (): JSX.Element => (
       </Switch>
     </div>
     <Footer />
+    <ScrollToTop />
   </Router>
 );
 
