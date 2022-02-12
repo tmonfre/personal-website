@@ -2,11 +2,11 @@ import About from './component';
 
 import { ImageInformation } from '../../index.d';
 
-import PersonalImg from '../../assets/images/personal.jpg';
-import KillingtonImg from '../../assets/images/killington.jpg';
-import TellurideImg from '../../assets/images/telluride.jpg';
-import MunisingImg from '../../assets/images/munising.jpg';
-import StoweImg from '../../assets/images/stowe.jpg';
+import PersonalImg from '../../assets/images/about/personal.jpg';
+import KillingtonImg from '../../assets/images/about/killington.jpg';
+import TellurideImg from '../../assets/images/about/telluride.jpg';
+import MunisingImg from '../../assets/images/about/munising.jpg';
+import StoweImg from '../../assets/images/about/stowe.jpg';
 
 const images: ImageInformation[] = [
   { src: PersonalImg, alt: 'Me — 2018' },

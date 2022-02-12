@@ -2,21 +2,21 @@ import Projects from './component';
 import { ProjectInformation } from './index.d';
 import { PageRoutes } from '../../constants/index';
 
-import PineBeetleHome from '../../assets/projects/pine-beetle/home.png';
-import PineBeetleTrappingData from '../../assets/projects/pine-beetle/trapping-data.png';
-import PineBeetlePredictionMap from '../../assets/projects/pine-beetle/prediction-map.png';
-import PineBeetlePredictionDetail from '../../assets/projects/pine-beetle/prediction-detail.png';
+import PineBeetleHome from '../../assets/images/projects/pine-beetle/home.png';
+import PineBeetleTrappingData from '../../assets/images/projects/pine-beetle/trapping-data.png';
+import PineBeetlePredictionMap from '../../assets/images/projects/pine-beetle/prediction-map.png';
+import PineBeetlePredictionDetail from '../../assets/images/projects/pine-beetle/prediction-detail.png';
 
-import MyBallotHomeGif from '../../assets/projects/myballot/home.gif';
-import MyBallotHome from '../../assets/projects/myballot/home.png';
-import MyBallotCompareCandidatesGif from '../../assets/projects/myballot/compare-candidates.gif';
-import MyBallotQuiz from '../../assets/projects/myballot/quiz.png';
+import MyBallotHomeGif from '../../assets/images/projects/myballot/home.gif';
+import MyBallotHome from '../../assets/images/projects/myballot/home.png';
+import MyBallotCompareCandidatesGif from '../../assets/images/projects/myballot/compare-candidates.gif';
+import MyBallotQuiz from '../../assets/images/projects/myballot/quiz.png';
 
-import SixAMAppHome from '../../assets/projects/6amhealth/app-home.jpg';
-import SixAMAppReviewOrder from '../../assets/projects/6amhealth/review-order-mobile.jpg';
-import SixAMWebHome from '../../assets/projects/6amhealth/order-web-home.png';
-import SixAMAWebCheckout from '../../assets/projects/6amhealth/checkout-web.png';
-import SixAMAdminOrder from '../../assets/projects/6amhealth/admin-order.png';
+import SixAMAppHome from '../../assets/images/projects/6amhealth/app-home.jpg';
+import SixAMAppReviewOrder from '../../assets/images/projects/6amhealth/review-order-mobile.jpg';
+import SixAMWebHome from '../../assets/images/projects/6amhealth/order-web-home.png';
+import SixAMAWebCheckout from '../../assets/images/projects/6amhealth/checkout-web.png';
+import SixAMAdminOrder from '../../assets/images/projects/6amhealth/admin-order.png';
 
 const standaloneProjects: ProjectInformation[] = [{
   title: 'Zoom CLI',
@@ -53,17 +53,6 @@ const imageProjects: ProjectInformation[] = [{
   ],
   web: 'https://www.spbpredict.com',
 }, {
-  title: 'MyBallot',
-  description: 'Website for viewing ballots in local elections and learning about candidates. MyBallot crawls the Internet for information about each candidate and runs a sentiment analysis algorithm to infer how candidates stand on important issues. Team project for culminating experience of CS major.',
-  technologies: ['React', 'Node', 'Python', 'MongoDB'],
-  images: [
-    { src: MyBallotHomeGif, alt: 'MyBallot discover elections' },
-    { src: MyBallotCompareCandidatesGif, alt: 'MyBallot compare candidates' },
-    { src: MyBallotQuiz, alt: 'MyBallot candidate matching quiz' },
-    { src: MyBallotHome, alt: 'MyBallot home page' },
-  ],
-  web: 'https://my-ballot.netlify.app/',
-}, {
   title: '6AM Health',
   description: 'Mobile and web applications for ordering fresh food to Internet-connected vending machines throughout the Boston area. Built in the DALI Lab partnering with a Boston-based start-up.',
   technologies: ['React', 'React Native', 'Node', 'MongoDB'],
@@ -76,6 +65,17 @@ const imageProjects: ProjectInformation[] = [{
   ],
   web: 'https://order.6amhealth.com',
   appStore: 'https://apps.apple.com/us/app/6am-health/id1474745789',
+}, {
+  title: 'MyBallot',
+  description: 'Website for viewing ballots in local elections and learning about candidates. MyBallot crawls the Internet for information about each candidate and runs a sentiment analysis algorithm to infer how candidates stand on important issues. Team project for culminating experience of CS major.',
+  technologies: ['React', 'Node', 'Python', 'MongoDB'],
+  images: [
+    { src: MyBallotHomeGif, alt: 'MyBallot discover elections' },
+    { src: MyBallotCompareCandidatesGif, alt: 'MyBallot compare candidates' },
+    { src: MyBallotQuiz, alt: 'MyBallot candidate matching quiz' },
+    { src: MyBallotHome, alt: 'MyBallot home page' },
+  ],
+  // web: 'https://my-ballot.netlify.app/',
 }];
 
 export default (): JSX.Element => (

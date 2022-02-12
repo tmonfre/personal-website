@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import {
   About,
+  Cancer,
   Contact,
   Home,
   NotFound,
@@ -28,6 +29,7 @@ const App = (): JSX.Element => (
         <Route exact path={PageRoutes.About} component={About} />
         <Route exact path={PageRoutes.Projects} component={Projects} />
         <Route exact path={PageRoutes.Contact} component={Contact} />
+        <Route exact path={PageRoutes.Cancer} component={Cancer} />
         <Route exact path={PageRoutes.Zoom} component={ZoomCLI} />
         <Route component={NotFound} />
       </Switch>

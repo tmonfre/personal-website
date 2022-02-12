@@ -1,0 +1,124 @@
+#cancer-container {
+    margin: 5vh 2vw;
+    margin-bottom: 100px;
+
+    .text-image-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .image-container {
+            margin-left: 50px;
+
+            img:hover {
+                cursor: pointer;
+            }
+
+            p {
+                font-style: italic;
+                color: grey;
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    // width of image when > 1550px
+    @media only screen and (min-width: 1550px) {
+        .image-container {
+            width: 175px;
+            
+            img {
+                width: 175px;
+            }
+        }
+
+        .text-container {
+            width: calc(100% - 225px);
+        }
+    }
+
+    // width of image when > 1400px
+    @media only screen and (min-width: 1400px) and (max-width: 1550px) {
+        .image-container {
+            width: 200px;
+            
+            img {
+                width: 200px;
+            }
+        }
+
+        .text-container {
+            width: calc(100% - 250px);
+        }
+    }
+
+    // width of image when < 1400px
+    @media only screen and (max-width: 1400px) {
+        .image-container {
+            width: 250px;
+
+            img {
+                width: 250px;
+            }
+        }
+
+        .text-container {
+            width: calc(100% - 300px);
+        }
+    }
+
+    // move picture underneath text when too small
+    @media only screen and (max-width: 800px) {
+        .text-image-container {
+            flex-direction: column;
+
+            .text-container {
+                width: 100%;
+            }
+
+            .image-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: -20px;
+                margin-left: 0px;
+
+                img {
+                    width: 75vw;
+                    max-width: 400px;
+                    height: auto;
+                }
+
+                p {
+                    width: 75vw;
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    // width of expanded image when > 1200px
+    @media only screen and (min-width: 1200px) {
+        #selected-image-container {
+            width: 33vw;
+        }
+    }
+
+    // width of expanded image when < 1200px
+    @media only screen and (max-width: 1200px) {
+        #selected-image-container {
+            width: 50vw;
+        }
+    }
+
+    // width of expanded image when < 725px
+    @media only screen and (max-width: 725px) {
+        #selected-image-container {
+            width: 70vw;
+        }
+    }
+}

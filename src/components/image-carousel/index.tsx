@@ -53,23 +53,27 @@ const ImageCarousel = (props: Props): JSX.Element => {
   return (
     <div id="selected-image-holder" onClick={handleBackgroundCloseClick} role="presentation">
       <div id="selected-image-container">
-        <img
-          alt="left chevron"
-          className="chevron"
-          onClick={imageShuffler(-1)}
-          role="presentation"
-          src={LeftChevron}
-          style={selectedIndex === 0 ? { filter: 'invert(50%)' } : {}}
-        />
+        {images.length > 1 ? (
+          <img
+            alt="left chevron"
+            className="chevron"
+            onClick={imageShuffler(-1)}
+            role="presentation"
+            src={LeftChevron}
+            style={selectedIndex === 0 ? { filter: 'invert(50%)' } : {}}
+          />
+        ) : null}
         <img src={images[selectedIndex].src} alt={images[selectedIndex].alt} />
-        <img
-          alt="right chevron"
-          className="chevron"
-          onClick={imageShuffler(1)}
-          role="presentation"
-          src={RightChevron}
-          style={selectedIndex === images.length - 1 ? { filter: 'invert(50%)' } : {}}
-        />
+        {images.length > 1 ? (
+          <img
+            alt="right chevron"
+            className="chevron"
+            onClick={imageShuffler(1)}
+            role="presentation"
+            src={RightChevron}
+            style={selectedIndex === images.length - 1 ? { filter: 'invert(50%)' } : {}}
+          />
+        ) : null}
       </div>
       <p>{images[selectedIndex].alt}</p>
     </div>

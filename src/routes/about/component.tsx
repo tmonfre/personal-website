@@ -69,6 +69,13 @@ const About = (props: Props): JSX.Element => {
           In my free time, I love to ski and explore the outdoors.
           I also enjoy cooking, baking, and spending time with friends.
         </p>
+        <p>
+          I am a proud cancer survivor.
+          Read about my journey and join me in the fight against cancer
+          {' '}
+          <Link to={PageRoutes.Cancer}>here</Link>
+          .
+        </p>
         <div className="button-container">
           <a href={window.location.origin + PageRoutes.Resume} target="_blank" rel="noreferrer">View my resume</a>
           <Link to={PageRoutes.Projects}>View my projects</Link>
