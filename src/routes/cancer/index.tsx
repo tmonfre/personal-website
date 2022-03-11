@@ -14,6 +14,7 @@ const organizations: CancerOrganization[] = [
   { title: 'Livestrong Foundation', href: 'https://www.livestrong.org' },
   { title: 'New York Cancer Foundation', href: 'https://www.nycancerfoundation.org' },
   { title: 'Samuel Waxman Cancer Research Foundation', href: 'https://www.waxmancancer.org' },
+  { title: 'Bellin Health Foundation', href: 'https://www.bellin.org/bellin_foundation' },
 ];
 
 export default (): JSX.Element => <Cancer images={images} organizations={organizations} />;

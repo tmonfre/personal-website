@@ -38,7 +38,7 @@ const About = (props: Props): JSX.Element => {
           {' '}
           <a href="https://www.disneystreaming.com/" target="_blank" rel="noreferrer">Disney Streaming Services</a>
           . Working on Disney+ taught me how to build large applications at massive scale
-          and create well-structured code.
+          and write well-structured code.
         </p>
         <p id="list-header">I&apos;m most experienced with the following technologies:</p>
         <ul>

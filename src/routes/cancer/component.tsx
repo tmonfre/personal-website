@@ -37,10 +37,10 @@ const Cancer = (props: Props): JSX.Element => {
               on February 15, 2022.
             </p>
             <p>
-              I am forever grateful to my incredible family and friends who helped me through this
-              journey. My parents and my sister were by my side throughout my treatment.
+              I am forever grateful for my incredible family and friends who helped me through this
+              journey. My parents and sister were by my side throughout my treatment.
               Many friends and extended family texted, called, sent letters, and kept in touch.
-              I am grateful for every one who thought of me, prayed for me, and supported me.
+              I am grateful for everyone who thought of me, supported me, and prayed for me.
             </p>
             <p>
               I am also forever grateful for the team of doctors, nurses, and medical professionals
