@@ -11,8 +11,8 @@ const Contact = (): JSX.Element => (
         I&apos;ll try my best to get back to you quickly.
       </p>
       <div className="button-container">
-        <a href="mailto:tmonfre1@gmail.com" target="_blank" rel="noreferrer">Get in touch</a>
-        <a href="https://www.linkedin.com/in/thomas-monfre" target="_blank" rel="noreferrer">Connect with me</a>
+        <a href="mailto:tmonfre1@gmail.com" target="_blank" rel="noreferrer">Send an email</a>
+        <a href="https://www.linkedin.com/in/thomas-monfre" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
       </div>
     </div>
   </FadeLoad>

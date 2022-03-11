@@ -28,7 +28,8 @@ const Home = (): JSX.Element => (
         </div>
         <div className="button-container">
           <Link to={PageRoutes.About}>Learn more about me</Link>
-          <Link to={PageRoutes.Cancer}>Join the fight against cancer</Link>
+          <Link to={PageRoutes.Contact}>Contact me</Link>
+          {/* <Link to={PageRoutes.Cancer}>Join the fight against cancer</Link> */}
         </div>
       </div>
     </div>
