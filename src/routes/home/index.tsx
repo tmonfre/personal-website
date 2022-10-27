@@ -12,7 +12,7 @@ const Home = (): JSX.Element => (
         <h1>Thomas Monfre</h1>
         <div id="text-section">
           <h3>
-            I&apos;m a software engineer residing in New York City.
+            I&apos;m a software engineer living in New York City.
           </h3>
           <h3>
             I graduated from
@@ -29,7 +29,6 @@ const Home = (): JSX.Element => (
         <div className="button-container">
           <Link to={PageRoutes.About}>Learn more about me</Link>
           <Link to={PageRoutes.Contact}>Contact me</Link>
-          {/* <Link to={PageRoutes.Cancer}>Join the fight against cancer</Link> */}
         </div>
       </div>
     </div>

@@ -26,28 +26,28 @@ const About = (props: Props): JSX.Element => {
         <h1>About Me</h1>
         <p>
           Hello! My name is Thomas.
-          I&apos;m a software engineer interested in full-stack web development,
-          big data, and the future of the Internet.
+          I&apos;m a software engineer based in New York City.
         </p>
         <p>
           I&apos;m a Forward Deployed Engineer at
           {' '}
           <a href="https://www.palantir.com/" target="_blank" rel="noreferrer">Palantir Technologies</a>
           ,
-          where I help build software to solve hard problems. I previously interned at
+          where I build software that leverages the power of technology with the scale of big data
+          to unlock key insights, empower critical workflows, and solve hard problems.
+          I previously interned at
           {' '}
           <a href="https://www.disneystreaming.com/" target="_blank" rel="noreferrer">Disney Streaming Services</a>
-          . Working on Disney+ taught me how to build large applications at massive scale
-          and write well-structured code.
+          . Working on Disney+ taught me how to build large applications at massive scale.
         </p>
         <p id="list-header">I&apos;m most experienced with the following technologies:</p>
         <ul>
-          <li>JavaScript</li>
           <li>TypeScript</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>MySQL & MongoDB</li>
           <li>Python</li>
+          <li>SQL</li>
+          <li>MongoDB</li>
+          <li>React/Redux</li>
+          <li>Java</li>
         </ul>
         <p>
           I graduated
@@ -78,7 +78,7 @@ const About = (props: Props): JSX.Element => {
         </p>
         <div className="button-container">
           <a href={window.location.origin + PageRoutes.Resume} target="_blank" rel="noreferrer">View my resume</a>
-          <Link to={PageRoutes.Projects}>View my projects</Link>
+          <Link to={PageRoutes.Contact}>Contact me</Link>
         </div>
         <div className="line" />
         <div id="image-container">
